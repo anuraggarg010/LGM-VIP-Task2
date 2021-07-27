@@ -1,0 +1,126 @@
+body{
+  background-color: darkslategrey;
+}
+.head{
+  text-align: center;
+  font-size: medium;
+  border-radius: 20px;
+  color: #000;
+ 
+}
+
+.nav{
+  margin-left: 100px;
+  width: 80%;
+  height:20%;
+  border-radius: 20%;
+
+}
+.thumbnail{
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background: gainsboro;
+  margin: 0 auto;
+  border-radius: 10px;
+ 
+}
+
+.box{
+  width: 800px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 15px;
+  margin: 0 auto;
+}
+
+
+
+
+.thumbnail:before,
+.thumbnail:after
+{
+  content:"";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  background: grey;
+  transition: 0.5s;
+  z-index:-1;
+}
+.thumbnail:hover:before{
+ 
+  box-shadow: 0 2px 20px white;
+ 
+}
+.thumbnail:hover:after{
+box-shadow: 0 2px 20px white;
+}
+.thumbnail .imgBx{
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  bottom: 5px;
+  right: 5px;
+  background: whitesmoke;
+  transition: 0.3s ease-out;
+  z-index: 1;
+  }
+
+.thumbnail:hover .imgBx
+{
+  bottom: 80px;
+  border: 6px solid whitesmoke;
+  transform: scale(0.8);
+  transition: 0.5 ease-out;
+  
+}
+
+.thumbnail .imgBx img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  filter: brightness(50%);
+
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumbnail .details{
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  background: black;
+  height: 60px;
+  text-align: center;
+}
+
+.thumbnail .details h2{
+ margin: 0;
+ padding: 0;
+ font-weight: 600;
+ font-size: 20px;
+ color:whitesmoke;
+} 
+ button {
+
+  cursor: pointer;
+ 
+  font-weight: 800;
+  outline: none;
+  border: none;
+  height: 40px;
+  font-size: 20px;
+  line-height: 45px;
+  margin: 0 0 2em;
+  max-width: 160px; 
+  width: 1000px; 
+  background-color: white;
+  border-radius: 10px;
+ 
+}
